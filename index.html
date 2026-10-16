@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Patliputra Equipment - premium JCB construction machines, service, spare parts and customer support in Patna, Bihar." />
+    <meta name="theme-color" content="#070808" />
+    <title>Patliputra Equipment | Premium JCB Digital Showroom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-loader" aria-hidden="true">
+      <div class="loader-mark">P</div>
+      <div>
+        <strong>PATLIPUTRA</strong>
+        <span>JCB digital showroom</span>
+      </div>
+      <div class="loader-line"></div>
+    </div>
+
+    <canvas class="particle-field" aria-hidden="true"></canvas>
+    <div class="cursor-light" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Patliputra Equipment home">
+        <span>P</span>
+        <b>PATLIPUTRA</b>
+        <i>equipment</i>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#machines" data-i18n="navMachines">Machines</a>
+        <a href="#products" data-i18n="navProducts">Products</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#about" data-i18n="navAbout">About us</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="language-switch" aria-label="Language switch">
+        <button class="lang-option active" type="button" data-lang="en">EN</button>
+        <button class="lang-option" type="button" data-lang="hi">हिंदी</button>
+      </div>
+      <div class="header-actions">
+        <a class="call-link phone-primary" href="tel:+919708216666" data-i18n="callNow">Call 97082 16666</a>
+        <button class="button button-small quote-trigger magnetic" data-i18n="getQuote">Get Quote</button>
+      </div>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" data-i18n="menu">Menu</button>
+    </header>
+
+    <main id="main">
+      <section id="home" class="hero scene-section">
+        <div class="hero-ambient" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow light"><span></span> <b data-i18n="heroEyebrow">PREMIUM JCB DEALERSHIP EXPERIENCE</b></p>
+          <h1 data-i18n="heroTitle">Power that moves Bihar.</h1>
+          <p class="hero-copy" data-i18n="heroCopy">Premium JCB Construction Equipment for Every Job.</p>
+          <div class="hero-actions">
+            <a class="button button-yellow magnetic" href="#machines" data-i18n="exploreMachines">Explore Machines</a>
+            <a class="button button-ghost magnetic" href="#contact" data-i18n="contactUs">Contact Us</a>
+          </div>
+          <div class="hero-stats" aria-label="Dealership services">
+            <div><strong>Sales</strong><span>Machine consultation</span></div>
+            <div><strong>Service</strong><span>Support and maintenance</span></div>
+            <div><strong>Parts</strong><span>Genuine JCB spares</span></div>
+          </div>
+        </div>
+
+        <div class="hero-machine" data-tilt-zone>
+          <div class="machine-stage hero-stage" style="--stage-scale:1; --stage-rotate:0deg; --stage-tilt:0deg;">
+            <div class="stage-ring"></div>
+            <div class="machine-shadow"></div>
+            <div class="machine-shell">
+              <img id="hero-machine-image" src="assets/machines/jcb-3dx-plus.webp" alt="JCB 3DX Plus backhoe loader" />
+            </div>
+            <div class="machine-reflection"></div>
+          </div>
+          <div class="hero-machine-caption glass-card">
+            <span>Featured Machine</span>
+            <strong id="hero-machine-name">JCB 3DX Plus</strong>
+            <small>Move the cursor to inspect the machine.</small>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#machines"><b data-i18n="scrollExplore">Scroll to explore</b> <span></span></a>
+      </section>
+
+      <section id="machines" class="section showcase-section reveal scene-section">
+        <div class="section-top">
+          <div>
+            <p class="eyebrow"><span></span> <b data-i18n="showcaseEyebrow">3D MACHINE SHOWCASE</b></p>
+            <h2 data-i18n="showcaseTitle">Explore the fleet with depth, motion and focus.</h2>
+          </div>
+          <p class="intro" data-i18n="showcaseIntro">Select a JCB machine to view its official visual, category, key details and enquiry path in one premium showroom view.</p>
+        </div>
+
+        <div class="showcase-layout">
+          <aside class="machine-selector glass-card" aria-label="Machine selector">
+            <div class="selector-head">
+              <span data-i18n="lineup">Lineup</span>
+              <strong data-i18n="machineCount">14 machines</strong>
+            </div>
+            <div class="selector-list" id="selector-list"></div>
+          </aside>
+
+          <div class="showcase-visual glass-panel" data-tilt-zone>
+            <div class="machine-stage showcase-stage" id="showcase-stage" style="--stage-scale:1; --stage-rotate:0deg; --stage-tilt:0deg;">
+              <div class="stage-ring"></div>
+              <div class="machine-shadow"></div>
+              <div class="machine-shell">
+                <img id="showcase-image" src="assets/machines/jcb-3dx-plus.webp" alt="JCB 3DX Plus" />
+              </div>
+              <div class="machine-reflection"></div>
+            </div>
+            <div class="showcase-controls" aria-label="Showcase controls">
+              <button class="icon-button" data-rotate="-18" title="Rotate left" aria-label="Rotate left">-</button>
+              <label class="zoom-control">Zoom <input id="zoom-control" type="range" min="92" max="116" value="100" /></label>
+              <button class="icon-button" data-rotate="18" title="Rotate right" aria-label="Rotate right">+</button>
+            </div>
+          </div>
+
+          <article class="showcase-details glass-card">
+            <p class="eyebrow"><span></span> <b data-i18n="selectedMachine">SELECTED MACHINE</b></p>
+            <h3 id="showcase-title">JCB 3DX Plus</h3>
+            <p id="showcase-description">A premium backhoe loader for productive loading, trenching and everyday site movement.</p>
+            <div class="spec-grid">
+              <div><span data-i18n="category">Category</span><strong id="showcase-category">Backhoe loader</strong></div>
+              <div><span data-i18n="keySpec">Key spec</span><strong id="showcase-spec">Backhoe loader</strong></div>
+              <div><span data-i18n="visual">Visual</span><strong data-i18n="officialAsset">Official JCB asset</strong></div>
+              <div><span data-i18n="interaction">Interaction</span><strong data-i18n="style360">360 style view</strong></div>
+            </div>
+            <ul class="feature-list" id="feature-list"></ul>
+            <div class="detail-actions">
+              <button class="button button-yellow quote-trigger magnetic" id="showcase-enquire" data-i18n="enquireNow">Enquire Now</button>
+              <button class="button button-ghost magnetic" type="button" id="showcase-details-button" data-i18n="viewDetails">View Details</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="products" class="section products-section reveal">
+        <div class="section-top">
+          <div>
+            <p class="eyebrow"><span></span> PRODUCT RANGE</p>
+            <h2>Official JCB machines, presented like a digital showroom.</h2>
+          </div>
+          <p class="intro">The range is kept focused on the models you selected, with no demo products or stock imagery.</p>
+        </div>
+        <div class="category-row" role="tablist" aria-label="Machine categories">
+          <button class="category active" data-filter="all" data-label-key="allMachines">All machines <small>14</small></button>
+          <button class="category" data-filter="Backhoe" data-label-key="backhoeLoaders">Backhoe loaders <small>04</small></button>
+          <button class="category" data-filter="Excavator" data-label-key="excavators">Excavators <small>05</small></button>
+          <button class="category" data-filter="Mini Excavator" data-label-key="miniExcavators">Mini excavators <small>04</small></button>
+          <button class="category" data-filter="Loader" data-label-key="loaders">Loaders <small>01</small></button>
+        </div>
+        <div class="product-grid" id="machine-grid"></div>
+        <div class="center">
+          <button id="show-all" class="outline-button magnetic">View All Machines</button>
+        </div>
+      </section>
+
+      <section id="why" class="section why-section reveal scene-section">
+        <div class="section-top">
+          <div>
+            <p class="eyebrow"><span></span> WHY CHOOSE US</p>
+            <h2>Built on trust, speed and real machine expertise.</h2>
+          </div>
+          <p class="intro">A dealership experience shaped around professional advice, genuine support and long-term ownership confidence.</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-card glass-card"><span>01</span><h3>Genuine JCB Machines</h3><p>Focused catalogue using official JCB product assets.</p></article>
+          <article class="why-card glass-card"><span>02</span><h3>Expert Support</h3><p>Guidance for machine selection, finance and site requirements.</p></article>
+          <article class="why-card glass-card"><span>03</span><h3>Fast Service</h3><p>Clear service entry points for maintenance and field support.</p></article>
+          <article class="why-card glass-card"><span>04</span><h3>Genuine Spare Parts</h3><p>Parts-first support to keep machines productive.</p></article>
+          <article class="why-card glass-card"><span>05</span><h3>Trusted Dealership</h3><p>Local team, local accountability and transparent contact access.</p></article>
+          <article class="why-card glass-card"><span>06</span><h3>Customer Satisfaction</h3><p>Conversion-focused enquiry flow for quick response.</p></article>
+        </div>
+        <div class="counter-strip">
+          <div><strong class="counter" data-target="14">0</strong><span>JCB models</span></div>
+          <div><strong class="counter" data-target="4">0</strong><span>product groups</span></div>
+          <div><strong class="counter" data-target="2">0</strong><span>direct numbers</span></div>
+          <div><strong class="counter" data-target="1">0</strong><span>trusted dealership</span></div>
+        </div>
+      </section>
+
+      <section id="services" class="services-section reveal">
+        <div class="service-visual" data-tilt-zone>
+          <img src="assets/machines/jcb-nxt-205.webp" alt="JCB excavator service and support" loading="lazy" />
+          <div class="service-orbit"><span>Sales</span><span>Service</span><span>Parts</span></div>
+        </div>
+        <div class="services-content">
+          <p class="eyebrow light"><span></span> SERVICE & SUPPORT</p>
+          <h2>Sales, service, spare parts and customer support.</h2>
+          <p>From the first discussion to machine ownership, the site keeps every important action close: quote, finance, support, WhatsApp and directions.</p>
+          <div class="support-list">
+            <a href="#contact"><b>01</b><span>Sales consultation</span><i>&rarr;</i></a>
+            <a href="#contact"><b>02</b><span>Service and maintenance</span><i>&rarr;</i></a>
+            <a href="#contact"><b>03</b><span>Genuine spare parts</span><i>&rarr;</i></a>
+            <a href="#contact"><b>04</b><span>Customer support</span><i>&rarr;</i></a>
+          </div>
+          <button class="button button-yellow quote-trigger magnetic">Request Support</button>
+        </div>
+      </section>
+
+      <section id="finance" class="section finance-section reveal">
+        <div>
+          <p class="eyebrow"><span></span> FINANCE ASSISTANCE</p>
+          <h2>Plan your machine investment with confidence.</h2>
+          <p class="intro">Use the quick calculator as an indicative guide. Final finance terms depend on lender approval and eligibility.</p>
+        </div>
+        <form class="calculator glass-card" id="calculator">
+          <div class="calc-head">
+            <span>Estimated monthly payment</span>
+            <output id="emi">Rs 0</output>
+          </div>
+          <label>Machine price <input id="price" type="number" value="3500000" min="0" step="50000" /></label>
+          <label>Down payment <input id="down" type="number" value="700000" min="0" step="50000" /></label>
+          <div class="form-two">
+            <label>Interest rate <input id="rate" type="number" value="10.5" min="0" step="0.1" /></label>
+            <label>Loan tenure
+              <select id="tenure">
+                <option value="36">3 years</option>
+                <option value="48">4 years</option>
+                <option value="60" selected>5 years</option>
+                <option value="72">6 years</option>
+              </select>
+            </label>
+          </div>
+        </form>
+      </section>
+
+      <section id="about" class="section about-section reveal">
+        <div class="about-media" data-tilt-zone>
+          <img src="assets/machines/jcb-3dx-super.webp" alt="Patliputra Equipment JCB dealership machine" loading="lazy" />
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow"><span></span> DEALERSHIP INTRODUCTION</p>
+          <h2>A premium showroom experience for serious work.</h2>
+          <p>Patliputra Equipment helps customers explore JCB machines, request quotes, connect for service and reach the dealership without friction. The design now reflects the power and precision of the machines it represents.</p>
+          <div class="about-actions">
+            <a class="button button-yellow magnetic" href="#contact">Visit Our Dealership</a>
+            <a class="button button-ghost dark magnetic map-link" target="_blank" rel="noopener" href="#">Get Directions</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section reveal scene-section">
+        <div class="section-top">
+          <div>
+            <p class="eyebrow"><span></span> CONTACT</p>
+            <h2>Speak to the team and move faster.</h2>
+          </div>
+          <p class="intro">Phone, WhatsApp, directions and enquiry capture are all connected to the same dealership details.</p>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-cards">
+            <a class="contact-card glass-card phone-primary" href="tel:+919708216666">
+              <small>Sales & General Enquiries</small>
+              <strong>9708216666</strong>
+              <span>Call dealership</span>
+            </a>
+            <a class="contact-card glass-card phone-secondary" href="tel:+919262296515">
+              <small>Alternate Contact</small>
+              <strong>9262296515</strong>
+              <span>Call alternate number</span>
+            </a>
+            <a class="contact-card glass-card whatsapp-link" target="_blank" rel="noopener" href="#">
+              <small>WhatsApp</small>
+              <strong>Message our team</strong>
+              <span>Start a conversation</span>
+            </a>
+            <a class="contact-card glass-card map-link" target="_blank" rel="noopener" href="#">
+              <small>Dealership Address</small>
+              <strong>Near Didarganj Check Post, NH-30</strong>
+              <span>Patna, India - 800008</span>
+            </a>
+          </div>
+
+          <form class="contact-form glass-panel" id="contact-form">
+            <h3>Send an enquiry</h3>
+            <div class="form-two">
+              <label>Your name <input id="contact-name" required autocomplete="name" placeholder="Full name" /></label>
+              <label>Phone number <input id="contact-phone" required type="tel" autocomplete="tel" placeholder="10-digit number" pattern="[0-9]{10}" /></label>
+            </div>
+            <label>Machine of interest <select id="contact-machine" required></select></label>
+            <label>Requirement <textarea id="contact-message" rows="4" placeholder="Tell us what you need"></textarea></label>
+            <button class="button button-yellow magnetic" type="submit">Submit Enquiry</button>
+            <p class="form-status" id="contact-status" role="status"></p>
+          </form>
+
+          <div class="map-panel glass-card">
+            <iframe title="Directions to Patliputra Equipment" loading="lazy" src="https://www.google.com/maps?q=Near%20Didarganj%20Check%20Post%2C%20NH-30%2C%20Patna%2C%20India%20%E2%80%93%20800008&output=embed"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#home"><span>P</span><b>PATLIPUTRA</b><i>equipment</i></a>
+      <p>Premium JCB construction equipment, service support and genuine parts assistance for the work ahead.</p>
+      <div class="footer-links">
+        <a href="#machines">Machines</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <b>CONTACT</b>
+        <a class="phone-primary" href="tel:+919708216666">9708216666</a>
+        <a class="phone-secondary" href="tel:+919262296515">9262296515</a>
+        <span>Near Didarganj Check Post, NH-30, Patna, India - 800008</span>
+      </div>
+      <small>&copy; <span id="year"></span> Patliputra Equipment. All rights reserved.</small>
+    </footer>
+
+    <div class="mobile-actions">
+      <a class="phone-primary" href="tel:+919708216666"><span data-i18n="callShort">Call</span><br /><small>97082 16666</small></a>
+      <a class="whatsapp-link" href="#" target="_blank" rel="noopener" data-i18n="whatsapp">WhatsApp</a>
+      <button class="quote-trigger" data-i18n="getQuote">Get Quote</button>
+    </div>
+
+    <aside class="machine-detail-drawer" id="machine-detail-drawer" aria-hidden="true">
+      <button class="drawer-backdrop" type="button" aria-label="Close details"></button>
+      <div class="drawer-panel glass-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+        <button class="drawer-close" type="button" aria-label="Close details">x</button>
+        <span class="drawer-kicker" data-i18n="machineDetails">Machine Details</span>
+        <img id="drawer-image" src="assets/machines/jcb-3dx-plus.webp" alt="JCB 3DX Plus" />
+        <h3 id="drawer-title">JCB 3DX Plus</h3>
+        <p id="drawer-description">A premium backhoe loader for productive loading, trenching and everyday site movement.</p>
+        <div class="drawer-specs" id="drawer-specs"></div>
+        <div class="drawer-section">
+          <h4 data-i18n="keyFeatures">Key Features</h4>
+          <ul id="drawer-features"></ul>
+        </div>
+        <div class="drawer-section">
+          <h4 data-i18n="bestFor">Best For</h4>
+          <p id="drawer-bestfor"></p>
+        </div>
+        <div class="drawer-actions">
+          <a class="button button-ghost magnetic" id="drawer-official" target="_blank" rel="noopener" href="#" data-i18n="officialPage">Official Page</a>
+          <button class="button button-yellow magnetic" id="drawer-quote" type="button" data-i18n="getQuote">Get Quote</button>
+        </div>
+      </div>
+    </aside>
+
+    <dialog id="enquiry-dialog">
+      <button class="dialog-close" aria-label="Close form">x</button>
+      <div id="form-content">
+        <p class="eyebrow"><span></span> START HERE</p>
+        <h2>How can we help?</h2>
+        <p class="dialog-copy">Share a few details and our team will get back to you.</p>
+        <form id="enquiry-form">
+          <div class="choice-row">
+            <button type="button" class="choice selected" data-type="Quote">Get a quote</button>
+            <button type="button" class="choice" data-type="Demo">Book a demo</button>
+            <button type="button" class="choice" data-type="Finance">Finance</button>
+            <button type="button" class="choice" data-type="Service">Service</button>
+          </div>
+          <label>Machine of interest <select id="machine" required></select></label>
+          <div class="form-two">
+            <label>Your name <input id="name" required autocomplete="name" placeholder="Full name" /></label>
+            <label>Phone number <input id="phone" required type="tel" autocomplete="tel" placeholder="10-digit number" pattern="[0-9]{10}" /></label>
+          </div>
+          <label>City <input id="city" required autocomplete="address-level2" placeholder="Your city" /></label>
+          <label>Tell us about your requirement <textarea id="message" rows="3" placeholder="Optional"></textarea></label>
+          <button class="button button-yellow submit-button" type="submit">Submit Enquiry</button>
+        </form>
+      </div>
+      <div id="success-content" hidden>
+        <div class="success-icon">OK</div>
+        <p class="eyebrow"><span></span> ENQUIRY RECEIVED</p>
+        <h2>Thank you.</h2>
+        <p>Our dealership team will contact you shortly. Your reference is <strong id="enquiry-id"></strong>.</p>
+        <p class="immediate-help">Need immediate assistance?<br /><a class="phone-primary" href="tel:+919708216666">Call 9708216666</a><br />Alternate: <a class="phone-secondary" href="tel:+919262296515">9262296515</a></p>
+        <button class="outline-button dialog-done">Back to site</button>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
